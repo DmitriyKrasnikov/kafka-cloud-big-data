@@ -1,0 +1,34 @@
+version: "3.5"
+
+services:
+  schema-registry:
+    image: confluentinc/cp-schema-registry:7.5.2
+    hostname: schema-registry
+    container_name: schema-registry
+    ports:
+      - "8081:8081"
+    environment:
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: "rc1a-rnbfflnjl9fl07s9.mdb.yandexcloud.net:9091,rc1b-h624a86gms3kk3ld.mdb.yandexcloud.net:9091,rc1d-0l18r18frfovrd31.mdb.yandexcloud.net:9091"
+      SCHEMA_REGISTRY_KAFKASTORE_SECURITY_PROTOCOL: SASL_SSL
+      SCHEMA_REGISTRY_KAFKASTORE_SASL_MECHANISM: SCRAM-SHA-512
+      SCHEMA_REGISTRY_KAFKASTORE_SASL_JAAS_CONFIG: >
+        org.apache.kafka.common.security.scram.ScramLoginModule required
+        username="my-schema-registry"
+        password="my-schema-registry";
+      SCHEMA_REGISTRY_KAFKASTORE_SSL_TRUSTSTORE_LOCATION: /truststore/yandex-ca.pem
+      SCHEMA_REGISTRY_KAFKASTORE_SSL_TRUSTSTORE_TYPE: PEM
+      SCHEMA_REGISTRY_KAFKASTORE_SSL_ENDPOINT_IDENTIFICATION_ALGORITHM: ""
+
+      SCHEMA_REGISTRY_DEBUG: "true"
+
+    volumes:
+      - ./yandex-ca.pem:/truststore/yandex-ca.pem:ro
+    networks:
+      - proxynet
+
+networks:
+  proxynet:
+    name: proxynet
