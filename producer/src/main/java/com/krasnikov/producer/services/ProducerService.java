@@ -10,7 +10,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import ru.ivan.ver.avro.MessageEvent;
+import src.main.avro.MessageEvent;
 
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
