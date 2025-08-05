@@ -16,11 +16,9 @@ import src.main.avro.MessageEvent;
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class ConsumerService {
-
     @KafkaListener(topics = "${topics.message}")
     public void getMessagesFromCorporateTopic(MessageEvent recordValue,
                                               @Header(KafkaHeaders.RECEIVED_KEY) String key) {
         log.info("key {}, value: {}", key, recordValue);
     }
-
 }
