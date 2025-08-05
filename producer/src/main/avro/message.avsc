@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "name": "MessageEvent",
+  "namespace": "ru.ivan.ver.avro",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "subject",
+      "type": "string"
+    },
+    {
+      "name": "body",
+      "type": "string"
+    }
+  ]
+}
