@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: producer
+
+  kafka:
+    producer:
+      bootstrap-servers: rc1a-rnbfflnjl9fl07s9.mdb.yandexcloud.net:9091,rc1b-h624a86gms3kk3ld.mdb.yandexcloud.net:9091,rc1d-0l18r18frfovrd31.mdb.yandexcloud.net:9091
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      acks: all
+
+      properties:
+        specific.avro.reader: true
+        schema.registry.url: http://localhost:8081
+        sasl.mechanism: SCRAM-SHA-512
+        sasl.jaas.config: >
+          org.apache.kafka.common.security.scram.ScramLoginModule required
+          username="producer-app"
+          password="producer-app";
+
+      security:
+        protocol: SASL_SSL
+
+      ssl:
+        trust-store-location: file:./yandex-truststore.jks
+        trust-store-password: changeit
+        key-password: changeit
+
+topics:
+  message: demo-topic

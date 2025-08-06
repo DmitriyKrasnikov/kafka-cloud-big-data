@@ -11,8 +11,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>consumer</artifactId>
-    <name>consumer</name>
+    <artifactId>avro-consumer</artifactId>
+    <name>avro-consumer</name>
     <description>Kafka consumer with Avro</description>
 
     <dependencies>

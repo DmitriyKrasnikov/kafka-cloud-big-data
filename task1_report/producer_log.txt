@@ -1,0 +1,180 @@
+2025-08-06T13:03:05.818+03:00  INFO 13696 --- [producer] [           main] c.k.producer.ProducerApplication         : Starting ProducerApplication using Java 17.0.15 with PID 13696 (C:\Users\NagibatorPC228\Desktop\Diman\kafka-cloud-big-data\avro-producer\target\classes started by NagibatorPC228 in C:\Users\NagibatorPC228\Desktop\Diman\kafka-cloud-big-data)
+2025-08-06T13:03:05.819+03:00  INFO 13696 --- [producer] [           main] c.k.producer.ProducerApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-08-06T13:03:06.338+03:00  INFO 13696 --- [producer] [           main] c.k.producer.ProducerApplication         : Started ProducerApplication in 0.84 seconds (process running for 1.234)
+2025-08-06T13:03:06.385+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values:
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [rc1a-rnbfflnjl9fl07s9.mdb.yandexcloud.net:9091, rc1b-h624a86gms3kk3ld.mdb.yandexcloud.net:9091, rc1d-0l18r18frfovrd31.mdb.yandexcloud.net:9091]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = none
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = SCRAM-SHA-512
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = C:\Users\NagibatorPC228\Desktop\Diman\kafka-cloud-big-data\yandex-truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2025-08-06T13:03:06.405+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-08-06T13:03:06.425+03:00  INFO 13696 --- [producer] [   scheduling-1] i.c.k.s.KafkaAvroSerializerConfig        : KafkaAvroSerializerConfig values:
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.remove.java.properties = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	proxy.host =
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-08-06T13:03:06.510+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-producer-1] Instantiated an idempotent producer.
+2025-08-06T13:03:06.537+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2025-08-06T13:03:06.600+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : These configurations '[specific.avro.reader, schema.registry.url]' were supplied but are not used yet.
+2025-08-06T13:03:06.603+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-08-06T13:03:06.603+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-08-06T13:03:06.603+03:00  INFO 13696 --- [producer] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1754474586601
+2025-08-06T13:03:07.055+03:00  INFO 13696 --- [producer] [ucer-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-producer-1] Cluster ID: 3o4qzP6eRK-0IKas4LbuGQ
+2025-08-06T13:03:07.056+03:00  INFO 13696 --- [producer] [ucer-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-producer-1] ProducerId set to 1002 with epoch 0
+2025-08-06T13:03:07.276+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=1, offset=5], key=44c27715-d2c5-4ee8-a404-4cef294bd6d6, event={"id": 1, "subject": "personal", "body": "071b2da0-8e31-413e-b592-95d4684a11d7 db5d4e63-ab3d-4fe5-8983-4e4056e37c05 10e5a45b-871c-4ad4-847e-fc5bec853c5a"}
+2025-08-06T13:03:08.319+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=0, offset=13], key=057935a8-2612-4cec-95b5-8352eb4cf5fa, event={"id": 2, "subject": "personal", "body": "b2e79f5b-06c8-467e-a778-bedc5047923b 9be23070-032d-4219-8fec-f4778e98cd66 7ba49393-7d21-4960-929a-f1d7c445dd7e"}
+2025-08-06T13:03:09.209+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=1, offset=6], key=35d92467-a5c0-4519-bec1-cb01381ebf9e, event={"id": 3, "subject": "personal", "body": "607e61fe-59dc-49a4-8263-2ef08f636ad0 d3afb0fd-030c-49ed-b744-9c0ea19e80f5 d4195338-14f5-465f-a1e3-dea1d2f06b4c"}
+2025-08-06T13:03:10.316+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=2, offset=11], key=902cc0be-e20a-461f-aa9e-df15081c2c4e, event={"id": 4, "subject": "personal", "body": "41d95519-5cd6-4f74-ac44-66d5235ec05c 8ac4f044-3b32-4bbd-b49e-85d37fd73a85 23e433c5-3fd7-448b-8497-5e35813caf70"}
+2025-08-06T13:03:11.233+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=2, offset=12], key=28a3426c-8c7b-4300-aa7c-961f8358e437, event={"id": 5, "subject": "personal", "body": "750cd46b-2bb5-4cc6-8706-f33bc31497d2 27dd4f14-9dea-4ac3-b295-632967ae13a7 37986cdb-b78d-444c-9cf9-b56c3152916a"}
+2025-08-06T13:03:12.246+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=0, offset=14], key=485a3154-65e2-4483-b6bf-ddd45b4f268b, event={"id": 6, "subject": "personal", "body": "fcaa317c-0a96-45f4-b474-1d3a7eb9e164 8f7a0621-957a-4100-811a-d8581dd858de bc836954-2cfe-4ed2-a61c-5a10fb268350"}
+2025-08-06T13:03:13.247+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=2, offset=13], key=7b96f10c-dab5-4daa-9cdb-21f45cc7f9a6, event={"id": 7, "subject": "personal", "body": "7c44ef17-fcdc-4f0f-880c-a9f8fc13bbc1 c4613930-d560-483c-990d-24415951fcb1 7e519e4c-d9fd-487a-b73a-55e38077d683"}
+2025-08-06T13:03:14.259+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=2, offset=14], key=f6186b4b-86b7-44b9-88dd-e09f2d106c94, event={"id": 8, "subject": "personal", "body": "ba95c635-0d39-4a34-b4a0-0fb3cc08b887 70c11dcc-3790-4e5b-bb57-3e803eded193 a3365a95-240e-43e3-858f-754afc24b3c7"}
+2025-08-06T13:03:15.270+03:00  INFO 13696 --- [producer] [ucer-producer-1] c.k.producer.services.ProducerService    : Successfully sent to topic demo-topic [partition=2, offset=15], key=46819166-85b4-458c-9d5d-8188200b9898, event={"id": 9, "subject": "personal", "body": "6a5f3d85-e130-491e-bc44-045020172367 fd6ee605-d583-48d9-b5a7-99ac38ffffe7 6db52179-c571-45c3-9175-288a4fe5b1f4"}

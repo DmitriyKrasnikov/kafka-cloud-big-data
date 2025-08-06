@@ -1,0 +1,133 @@
+2025-08-06T12:56:09.303+03:00  INFO 1852 --- [           main] c.e.n.NifiConsumerApplication            : Starting NifiConsumerApplication using Java 17.0.15 with PID 1852 (C:\Users\NagibatorPC228\Desktop\Diman\kafka-cloud-big-data\nifi-consumer\target\classes started by NagibatorPC228 in C:\Users\NagibatorPC228\Desktop\Diman\kafka-cloud-big-data)
+2025-08-06T12:56:09.306+03:00  INFO 1852 --- [           main] c.e.n.NifiConsumerApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-08-06T12:56:09.994+03:00  INFO 1852 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [rc1a-rnbfflnjl9fl07s9.mdb.yandexcloud.net:9091, rc1b-h624a86gms3kk3ld.mdb.yandexcloud.net:9091, rc1d-0l18r18frfovrd31.mdb.yandexcloud.net:9091]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-nifi-consumer-groups-1
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = nifi-consumer-groups
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = SCRAM-SHA-512
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = C:\Users\NagibatorPC228\Desktop\Diman\kafka-cloud-big-data\yandex-truststore.jks
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-08-06T12:56:10.025+03:00  INFO 1852 --- [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-08-06T12:56:10.068+03:00  INFO 1852 --- [           main] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2025-08-06T12:56:10.184+03:00  INFO 1852 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[specific.avro.reader, spring.json.trusted.packages, schema.registry.url]' were supplied but are not used yet.
+2025-08-06T12:56:10.186+03:00  INFO 1852 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-08-06T12:56:10.187+03:00  INFO 1852 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-08-06T12:56:10.187+03:00  INFO 1852 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1754474170185
+2025-08-06T12:56:10.188+03:00  INFO 1852 --- [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Subscribed to topic(s): nifi-topic
+2025-08-06T12:56:10.203+03:00  INFO 1852 --- [           main] c.e.n.NifiConsumerApplication            : Started NifiConsumerApplication in 1.326 seconds (process running for 1.792)
+2025-08-06T12:56:10.627+03:00  INFO 1852 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Cluster ID: 3o4qzP6eRK-0IKas4LbuGQ
+2025-08-06T12:56:10.627+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Discovered group coordinator rc1b-h624a86gms3kk3ld.mdb.yandexcloud.net:9091 (id: 2147483645 rack: null)
+2025-08-06T12:56:10.629+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] (Re-)joining group
+2025-08-06T12:56:10.809+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Request joining group due to: need to re-join with the given member-id: consumer-nifi-consumer-groups-1-a39f913f-8edc-4505-8ece-e62d80724e9b
+2025-08-06T12:56:10.809+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] (Re-)joining group
+2025-08-06T12:56:11.875+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Successfully joined group with generation Generation{generationId=1, memberId='consumer-nifi-consumer-groups-1-a39f913f-8edc-4505-8ece-e62d80724e9b', protocol='range'}
+2025-08-06T12:56:11.880+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Finished assignment for group at generation 1: {consumer-nifi-consumer-groups-1-a39f913f-8edc-4505-8ece-e62d80724e9b=Assignment(partitions=[nifi-topic-0, nifi-topic-1, nifi-topic-2])}
+2025-08-06T12:56:11.963+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Successfully synced group in generation Generation{generationId=1, memberId='consumer-nifi-consumer-groups-1-a39f913f-8edc-4505-8ece-e62d80724e9b', protocol='range'}
+2025-08-06T12:56:11.964+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Notifying assignor about the new Assignment(partitions=[nifi-topic-0, nifi-topic-1, nifi-topic-2])
+2025-08-06T12:56:11.966+03:00  INFO 1852 --- [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Adding newly assigned partitions: nifi-topic-0, nifi-topic-1, nifi-topic-2
+2025-08-06T12:56:11.990+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Found no committed offset for partition nifi-topic-0
+2025-08-06T12:56:11.990+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Found no committed offset for partition nifi-topic-1
+2025-08-06T12:56:11.990+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Found no committed offset for partition nifi-topic-2
+2025-08-06T12:56:12.106+03:00  INFO 1852 --- [consumer-groups] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Resetting offset for partition nifi-topic-1 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[rc1d-0l18r18frfovrd31.mdb.yandexcloud.net:9091 (id: 3 rack: ru-central1-d)], epoch=0}}.
+2025-08-06T12:56:12.118+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Resetting offset for partition nifi-topic-2 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[rc1a-rnbfflnjl9fl07s9.mdb.yandexcloud.net:9091 (id: 1 rack: ru-central1-a)], epoch=0}}.
+2025-08-06T12:56:12.145+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-nifi-consumer-groups-1, groupId=nifi-consumer-groups] Resetting offset for partition nifi-topic-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[rc1b-h624a86gms3kk3ld.mdb.yandexcloud.net:9091 (id: 2 rack: ru-central1-b)], epoch=0}}.
+2025-08-06T12:56:12.145+03:00  INFO 1852 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : nifi-consumer-groups: partitions assigned: [nifi-topic-0, nifi-topic-1, nifi-topic-2]
+2025-08-06T12:56:12.179+03:00  INFO 1852 --- [ntainer#0-0-C-1] c.e.n.services.ConsumerService           : raw JSON: {"id":1,"name":"Екатерина","age":21,"email":"kate@yandex.ru"}
+2025-08-06T12:56:12.180+03:00  INFO 1852 --- [ntainer#0-0-C-1] c.e.n.services.ConsumerService           : raw JSON: {"id":4,"name":"Алексей","age":26,"email":"alex@yandex.ru"}
+2025-08-06T12:56:12.225+03:00  INFO 1852 --- [ntainer#0-0-C-1] c.e.n.services.ConsumerService           : raw JSON: {"id":3,"name":"Майя","age":21,"email":"maya@yandex.ru"}
+2025-08-06T12:56:12.225+03:00  INFO 1852 --- [ntainer#0-0-C-1] c.e.n.services.ConsumerService           : raw JSON: {"id":6,"name":"Виктория","age":22,"email":"vika@yandex.ru"}
+2025-08-06T12:56:12.225+03:00  INFO 1852 --- [ntainer#0-0-C-1] c.e.n.services.ConsumerService           : raw JSON: {"id":2,"name":"Никита","age":26,"email":"nikita@yandex.ru"}
+2025-08-06T12:56:12.225+03:00  INFO 1852 --- [ntainer#0-0-C-1] c.e.n.services.ConsumerService           : raw JSON: {"id":5,"name":"Илья","age":25,"email":"ilya@yandex.ru"}

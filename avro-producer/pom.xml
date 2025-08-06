@@ -12,8 +12,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>producer</artifactId>
-    <name>producer</name>
+    <artifactId>avro-producer</artifactId>
+    <name>avro-producer</name>
     <description>Kafka producer with Avro</description>
 
     <dependencies>

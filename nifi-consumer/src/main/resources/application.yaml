@@ -1,17 +1,14 @@
 spring:
-  application:
-    name: consumer
-
   kafka:
     consumer:
       bootstrap-servers: rc1a-rnbfflnjl9fl07s9.mdb.yandexcloud.net:9091,rc1b-h624a86gms3kk3ld.mdb.yandexcloud.net:9091,rc1d-0l18r18frfovrd31.mdb.yandexcloud.net:9091
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
-      group-id: consumer-group-id
-      auto-offset-reset: latest
-      enable-auto-commit: true
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: nifi-consumer-groups
+      auto-offset-reset: earliest
 
       properties:
+        spring.json.trusted.packages: "*"
         specific.avro.reader: true
         schema.registry.url: http://localhost:8081
         sasl.mechanism: SCRAM-SHA-512
@@ -27,6 +24,5 @@ spring:
         trust-store-location: file:./yandex-truststore.jks
         trust-store-password: changeit
         key-password: changeit
-
 topics:
-  message: demo-mest-test-topic
+  message: nifi-topic
