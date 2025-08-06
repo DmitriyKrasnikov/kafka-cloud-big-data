@@ -16,38 +16,32 @@
     <description>Kafka consumer with Avro</description>
 
     <dependencies>
-        <!-- Spring Boot Core -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <!-- Spring Kafka Consumer -->
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
         </dependency>
 
-        <!-- Confluent Avro Deserializer -->
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>
         </dependency>
 
-        <!-- Apache Avro -->
         <dependency>
             <groupId>org.apache.avro</groupId>
             <artifactId>avro</artifactId>
         </dependency>
 
-        <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
 
-        <!-- Тесты -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -57,7 +51,6 @@
 
     <build>
         <plugins>
-            <!-- Avro Codegen Plugin -->
             <plugin>
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro-maven-plugin</artifactId>
@@ -65,7 +58,9 @@
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
-                        <goals><goal>schema</goal></goals>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
                         <configuration>
                             <sourceDirectory>${project.basedir}/src/main/avro</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-sources/avro</outputDirectory>
@@ -75,7 +70,6 @@
                 </executions>
             </plugin>
 
-            <!-- Добавление сгенерированного исходника -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
@@ -84,7 +78,9 @@
                     <execution>
                         <id>add-avro-generated-sources</id>
                         <phase>generate-sources</phase>
-                        <goals><goal>add-source</goal></goals>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
                         <configuration>
                             <sources>
                                 <source>${project.build.directory}/generated-sources/avro</source>

@@ -4,12 +4,11 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Наследуем Spring Boot Starter Parent чтобы получить все BOM‐ы и плагины -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.5.4</version>
-        <relativePath/> <!-- из репозитория -->
+        <relativePath/>
     </parent>
 
     <groupId>com.krasnikov</groupId>
@@ -28,10 +27,8 @@
         <java.version>17</java.version>
     </properties>
 
-    <!-- Здесь объявляем версии Avro и Confluent, которые будут унаследованы модулями -->
     <dependencyManagement>
         <dependencies>
-            <!-- BOM Confluent для kafka-avro-serializer -->
             <dependency>
                 <groupId>io.confluent</groupId>
                 <artifactId>kafka-avro-serializer</artifactId>
@@ -39,7 +36,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Apache Avro -->
             <dependency>
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro</artifactId>
@@ -57,7 +53,6 @@
 
     <build>
         <plugins>
-            <!-- Spring Boot Maven Plugin, общий для всех модулей -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

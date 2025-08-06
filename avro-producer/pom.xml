@@ -4,7 +4,6 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--  Здесь указываем корневой агрегатор, а не spring-boot-starter-parent  -->
     <parent>
         <groupId>com.krasnikov</groupId>
         <artifactId>kafka-cloud-big-data</artifactId>
@@ -17,7 +16,6 @@
     <description>Kafka producer with Avro</description>
 
     <dependencies>
-        <!-- унаследованные версии spring-boot, spring-kafka, avro, confluent -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -34,7 +32,6 @@
             <groupId>org.apache.avro</groupId>
             <artifactId>avro</artifactId>
         </dependency>
-        <!-- тесты, lombok и пр. -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -49,7 +46,6 @@
 
     <build>
         <plugins>
-            <!-- Avro plugin: сгенерирует классы из src/main/avro -->
             <plugin>
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro-maven-plugin</artifactId>
@@ -68,7 +64,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <!-- Добавляем папку сгенерированных классов в sourceRoot -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
@@ -77,7 +72,9 @@
                     <execution>
                         <id>add-avro-generated-sources</id>
                         <phase>generate-sources</phase>
-                        <goals><goal>add-source</goal></goals>
+                        <goals>
+                            <goal>add-source</goal>
+                        </goals>
                         <configuration>
                             <sources>
                                 <source>${project.build.directory}/generated-sources/avro</source>

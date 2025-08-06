@@ -21,7 +21,7 @@ spring:
         protocol: SASL_SSL
 
       ssl:
-        trust-store-location: file:./yandex-truststore.jks
+        trust-store-location: file:./certs/yandex-truststore.jks
         trust-store-password: changeit
         key-password: changeit
 topics:

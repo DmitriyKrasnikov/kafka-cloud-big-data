@@ -1,4 +1,19 @@
-1. Создан PublishKafkaRecord_2_0, настроенно SASL_SLL подключение, указан пользователь, пароль:
+1. Создана дирректория /opt/nifi/nifi-current/data и  файл для отправки командой внутри контейнера:
+   nifi@nifi:/opt/nifi/nifi-current$ cd /opt/nifi/nifi-current/data
+   nifi@nifi:/opt/nifi/nifi-current/data$
+   cat > input.csv << 'EOF'
+   id,name,age,email
+   1,Екатерина,21,kate@yandex.ru
+   2,Никита,26,nikita@yandex.ru
+   3,Майя,21,maya@yandex.ru
+   4,Алексей,26,alex@yandex.ru
+   5,Илья,25,ilya@yandex.ru
+   6,Виктория,22,vika@yandex.ru
+   EOF
+
+2. Создан GetFile со следующими настройками:
+- ![Снимок экрана кластера](/task2_report/Снимок%20экрана%20(12).png)
+2. Создан PublishKafkaRecord_2_0, настроенно SASL_SLL подключение, указан пользователь, пароль, соединен с GetFile:
 - ![Снимок экрана кластера](/task2_report/Снимок%20экрана%20(5).png)
 2. Создан StandardSSLContextService
 - ![Снимок экрана кластера](/task2_report/Снимок%20экрана%20(61).png)

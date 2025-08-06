@@ -14,11 +14,11 @@
 Шаг 3. Настроена Schema Registry:
 - Развернута Schema Registry, настройки можно посмотреть в [docker-compose.yaml](../docker-compose.yaml)
 - Создан пользователь my-schema-registry для настройки sasl подключения
-- Скачан сертификат [сертификат](../yandex-ca.pem) и добавлен в [truststore](../yandex-truststore.jks) для для подключения по ssl
+- Скачан сертификат [сертификат](../certs/yandex-ca.pem) и добавлен в [truststore](../certs/yandex-truststore.jks) для для подключения по ssl
 - Схема была зарегестрирована при отправке сообщения продюсером
 
 Шаг 4. Проверена работа Kafka:
-- Написан [продюсер](../producer) и [консьюмер](../consumer).
+- Написан [продюсер](../avro-producer) и [консьюмер](../avro-consumer).
 - Отправлены тестовые сообщения. Логи [продюсер](../task1_report/producer_log.txt) и [консьюмер](../task1_report/consumer_log.txt).
 - Скриншоты логов: [продюсер](../task1_report/producer_log.png) и [консьюмер](../task1_report/consumer_log.png)
 
